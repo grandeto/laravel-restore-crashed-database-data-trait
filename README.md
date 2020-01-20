@@ -1,0 +1,1 @@
+# laravel-restore-crashed-database-data-trait
