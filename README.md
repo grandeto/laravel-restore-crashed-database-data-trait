@@ -1,1 +1,1 @@
-# laravel-restore-crashed-database-data-trait
+# Laravel 5.4 - Restore crashed database data trait
