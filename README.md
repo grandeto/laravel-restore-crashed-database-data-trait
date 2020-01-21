@@ -16,6 +16,8 @@
 
 -- Only not updated rows after the snapshot apply should be updated.
 
+*Data is predictibale so, no data validation is needed.
+
 ## Steps for successful completion ##
 
 1. The start and the end of the data gap in the database should be carefully inspected for each table.
