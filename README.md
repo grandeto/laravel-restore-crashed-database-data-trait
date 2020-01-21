@@ -2,19 +2,19 @@
 
 ## Scenario details: ##
 
-A monolithic application crashes on Friday evening.
-The latest snapshot is from Thursday.
-The snapshot from Thursday is applied after the crash.
-Happily, the crashed database is successfully retrieved from the crashed server.
-However, the restored application database is behind the crashed database.
-Also, new data is constantly submitted to the restored database from Thursday that is now the operational production database.
-Thus, there is a one day gap between the crashed and restored database.
+- A monolithic application crashes on Friday evening.
+- The latest snapshot is from Thursday.
+- The snapshot from Thursday is applied after the crash.
+- Happily, the crashed database is successfully retrieved from the crashed server.
+- However, the restored application database is behind the crashed database.
+- Also, new data is constantly submitted to the restored database from Thursday that is now the operational production database.
+- Thus, there is a one day gap between the crashed and restored database.
 
-The Task is the missing data from Friday to be smoothly and correctly restored to the new operational database.
+-- The Task is missing data from Friday to be smoothly and correctly restored to the new production database.
 
-All the foreign keys should be properly updated with their new related rows IDs.
+-- All the foreign keys should be properly updated with their new related rows IDs.
 
-Only not updated rows after the snapshot apply should be updated.
+-- Only not updated rows after the snapshot apply should be updated.
 
 ## Steps for successful completion ##
 
