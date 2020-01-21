@@ -14,7 +14,7 @@
 
 -- All the foreign keys should be properly updated with their new related rows IDs.
 
--- Only not updated rows after the snapshot apply should be updated.
+-- Only the rows that have not been updated after the Thursday snapshot has been applied should be updated during the restore process.
 
 *Data is predictibale so, no data validation is needed.
 
