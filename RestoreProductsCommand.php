@@ -19,7 +19,7 @@ class RestoreProductsCommand extends Command
         'find_by' => ['request_id' => '='],
         'additionals_find_by' => [],
         'found_columns_exceptions' => [],
-        'init_qry_params' => [['updated_at', '>', '2020-01-11 02:46:07']],
+        'init_qry_params' => [['updated_at', '>', '2020-01-10 02:46:07']],
         'crashed_restored_ids_map_file_create' => 'crashed_restored_products_ids_map.json',
         'foreign_keys_map' => ['user_id' => 'crashed_restored_users_ids_map.json'],
     ];
