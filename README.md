@@ -20,18 +20,18 @@
 
 ## Steps for successful completion ##
 
-1. The start and the end of the data gap in the database should be carefully inspected for each table.
-2. All restore steps of the database tablse should be planned according to the foreign keys and their dependencies.
-3. All the restore steps in Laravel should be separated to single Laravel Commands and one trait containing all the logic.
+1. The start and the end of the data gap in the current production database should be carefully inspected for each table.
+2. All restore steps of each of the database tables should be planned according to the foreign keys changes that have been occured after the crash.
+3. All the restore steps should handled using Laravel Commands and a Trait containing all the restore logic.
 4. The restore logic should be maximum abstract.
 5. All the commands should be manually executed from the console.
 6. Supervisor (if any) should be stopped.
-7. Application should be put in a maintenance mode - php artisan down.
-8. A database dump of the current operational production database should be made.
-9. All the commands should be executed with proper Linux user having read/write permissions in the project folder.
-10. Add crashed DB connection to env .and config and deploy.
+7. Application should be put in a maintenance mode - php artisan down
+8. A database backup dump of the current operational production database should be made before the execution of the resote commands.
+9. All the restore commands should be executed with proper Linux user having read/write permissions in the project folder.
+10. Crashed DB connection should be added to the .env and config/database
 11. Execute restore commands.
-12. Remove crashed DB connection from .env and config and deploy.
+12. Remove crashed DB connection from .env and config/database
 13. Investigate restored data
 14. Start Supervisor (if any)
 15. php artisan up
