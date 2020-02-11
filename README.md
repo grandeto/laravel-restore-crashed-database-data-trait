@@ -27,12 +27,12 @@
 4. The restore logic should be maximum abstract.
 5. All the commands should be manually executed from the console.
 6. Supervisor (if any) should be stopped.
-7. Application should be put in a maintenance mode - php artisan down
+7. Application should be put in a maintenance mode - `php artisan down`
 8. A database backup dump of the current operational production database should be made before the execution of the resote commands.
 9. All the restore commands should be executed with proper Linux user having read/write permissions in the project folder.
-10. Crashed DB connection should be added to the .env and config/database
+10. Crashed DB connection should be added to the `.env` and `config/database`
 11. Execute restore commands.
-12. Remove crashed DB connection from .env and config/database
+12. Remove crashed DB connection from `.env` and `config/database`
 13. Investigate restored data
 14. Start Supervisor (if any)
-15. php artisan up
+15. `php artisan up`
