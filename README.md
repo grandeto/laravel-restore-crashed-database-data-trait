@@ -7,7 +7,7 @@
 - The snapshot from Thursday is applied on production after the crash.
 - Happily, the crashed database is successfully retrieved from the crashed server.
 - However, the database from the snapshot is behind the restored crashed database and also, a new data is constantly submitted to the database from Thursday snapshot that is now the operational production database.
-- Thus, there is a one day gap between the crashed and restored database.
+- Thus, there is a one day of data gap between the crashed (old prod) and the restored (new prod) database.
 
 -- The Task is missing data from Friday to be smoothly and correctly restored to the new production database.
 
@@ -19,7 +19,7 @@
 
 ## Steps for successful completion ##
 
-### Important: Sync your dev env timezone to prod env timezone
+### Important: Sync your dev env timezone with prod env timezone
 
 1. The start and the end of the data gap in the current production database should be carefully inspected for each table.
 2. All restore steps of each of the database tables should be planned according to the foreign keys changes that have been occured after the crash.
