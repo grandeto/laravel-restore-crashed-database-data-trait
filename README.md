@@ -19,7 +19,7 @@
 
 ## Steps for successful completion ##
 
-### Important: Sync your dev env timezone with prod env timezone
+### Important: Sync your dev env timezones with prod env timezones
 
 1. The start and the end of the data gap in the current production database should be carefully inspected for each table.
 2. All restore steps of each of the database tables should be planned according to the foreign keys changes that have been occured after the crash.
